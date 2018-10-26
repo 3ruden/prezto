@@ -1,4 +1,4 @@
-#
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin#
 # Executes commands at the start of an interactive session.
 #
 # Authors:
@@ -11,3 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+#lsコマンドの色を変更
+export LSCOLORS=bxgxcxdxfxebedafabacad
+
